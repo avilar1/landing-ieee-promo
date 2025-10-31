@@ -1,0 +1,185 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const active = ref(1)
+
+function show(n: number) {
+    active.value = n
+}
+</script>
+
+<template>
+    <div class="visit-rio" v-observe="{ once: false }">
+        <div class="visit-titl">
+            <h2 class="visit-h2">Welcome to Rio: Explore the Host City</h2>
+            <p class="visit-sub">Don't forget to explore the vibrant city hosting us!
+                Rio de Janeiro é uma mistura de beleza natural e riqueza cultural que oferece uma experiência
+                inesquecível
+                fora das salas de conferência.</p>
+        </div>
+        <div class="visit-container-deck">
+            <nav class="visit-nav">
+                <button class="btn-visit" :class="{ active: active === 1 }" @click="show(1)">Beaches &
+                    Coastline</button>
+                <button class="btn-visit" :class="{ active: active === 2 }" @click="show(2)">Natural Wonders</button>
+                <button class="btn-visit" :class="{ active: active === 3 }" @click="show(3)">Culture & History</button>
+            </nav>
+
+            <!-- um único transition com chave, para evitar sobreposição -->
+            <transition name="fade" mode="out-in">
+                <div :key="active" class="visit-imgs-cards" :class="`visit-imgs-cards-${active}`">
+                    <template v-if="active === 1">
+                        <img src="../../public/images/R11.png" alt="">
+                        <img src="../../public/images/R12.png" alt="">
+                        <img src="../../public/images/R13.png" alt="">
+                    </template>
+
+                    <template v-else-if="active === 2">
+                        <img src="../../public/images/R21.png" alt="">
+                        <img src="../../public/images/R22.png" alt="">
+                        <img src="../../public/images/R23.png" alt="">
+                    </template>
+
+                    <template v-else>
+                        <img src="../../public/images/R31.png" alt="">
+                        <img src="../../public/images/R32.png" alt="">
+                        <img src="../../public/images/R33.png" alt="">
+                    </template>
+                </div>
+            </transition>
+        </div>
+
+        <div class="visit-container-btn-visit">
+            <button class="btn-vRio">Go To Visit Rio</button>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+.visit-rio {
+    width: 100%;
+    background-color: var(--neutral-color-light);
+    padding: 64px 0;
+}
+
+.visit-titl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem 2rem 2rem;
+    gap: 1rem;
+}
+
+.visit-h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.visit-sub {
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+}
+
+.visit-container-deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.visit-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: var(--secondary-color-dark);
+    border-radius: 8px;
+}
+
+.btn-visit {
+    background-color: var(--secondary-color-dark);
+    color: var(--secondary-color-light);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 10px;
+}
+
+/* estado visual do botão ativo */
+.btn-visit.active {
+    background-color: var(--secondary-color-light);
+    color: var(--primary-color);
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.visit-imgs-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.visit-imgs-cards img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* transição suave (fade + slide horizontal consistente) */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.fade-enter-from {
+    opacity: 0;
+    transform: translateX(12px);
+}
+
+.fade-enter-to {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-leave-from {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-leave-to {
+    opacity: 0;
+    transform: translateX(-12px);
+}
+
+.btn-vRio {
+    margin: 4rem auto;
+    background-color: var(--primary-color);
+    color: var(--neutral-color-light);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-vRio:hover {
+    background-color: var(--primary-color-dark);
+    transition: background-color 200ms ease;
+}
+
+.visit-container-btn-visit {
+    text-align: center;
+}
+</style>
