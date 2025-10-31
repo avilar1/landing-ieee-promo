@@ -4,27 +4,27 @@
             <h2 class="sponsors-h2">Organization & Sponsorship</h2>
             <div class="sponsors-box">
                 <h4>Organized by:</h4>
-                <div class="sponsors-organized" v-observe="{ once: false }">
-                    <img src="../../public/images/S11.png" alt="">
-                    <img src="../../public/images/S12.png" alt="">
+                <div class="sponsors-organized">
+                    <img src="../../public/images/S11.png" alt="sponsor 1">
+                    <img src="../../public/images/S12.png" alt="sponsor 2">
                 </div>
             </div>
             <div class="sponsors-box">
                 <h4>Supported by:</h4>
-                <div class="sponsors-organized" v-observe="{ once: false }">
-                    <img src="../../public/images/S11.png" alt="">
-                    <img src="../../public/images/S22.png" alt="">
-                    <img src="../../public/images/S12.png" alt="">
-                    <img src="../../public/images/S11.png" alt="">
+                <div class="sponsors-organized">
+                    <img src="../../public/images/S11.png" alt="sponsor 1">
+                    <img src="../../public/images/S22.png" alt="sponsor 2">
+                    <img src="../../public/images/S12.png" alt="sponsor 3">
+                    <img src="../../public/images/S11.png" alt="sponsor 4">
                 </div>
             </div>
             <div class="sponsors-box">
                 <h4>Other partnerships:</h4>
-                <div class="sponsors-organized" v-observe="{ once: false }">
-                    <img src="../../public/images/S11.png" alt="">
-                    <img src="../../public/images/S12.png" alt="">
-                    <img src="../../public/images/S22.png" alt="">
-                    <img src="../../public/images/S12.png" alt="">
+                <div class="sponsors-organized">
+                    <img src="../../public/images/S11.png" alt="sponsor 1">
+                    <img src="../../public/images/S12.png" alt="sponsor 2">
+                    <img src="../../public/images/S22.png" alt="sponsor 3">
+                    <img src="../../public/images/S12.png" alt="sponsor 4">
 
                 </div>
             </div>
