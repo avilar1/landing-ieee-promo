@@ -78,7 +78,7 @@ onUnmounted(() => {
     height: 100%;
     background:
         /* C1 - ruído */
-        url('../../public/images/noise.png') repeat,
+        url('../../public/images/ruido1.png') repeat,
         /* C2 */
         linear-gradient(rgba(31, 28, 26, 0.15), rgba(255, 251, 247, 0.15)),
         /* C3 */
