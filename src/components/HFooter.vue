@@ -1,5 +1,5 @@
 <template>
-    <div class="in-footer" v-observe>
+    <div class="in-footer" v-observe id="follow">
         <h2 class="footer-h2">Stay Connected</h2>
         <p class="footer-p">Don't miss out on crucial updates, speaker announcements, networking tips, and
             behind-the-scenes looks at Rio! <br />

@@ -1,5 +1,5 @@
 <template>
-    <div class="supporters-geral">
+    <div class="supporters-geral" id="sponsors">
         <div class="supporters-container">
             <h2 class="supporters-h2">Organization & Sponsorship</h2>
             <div class="supporters-box">

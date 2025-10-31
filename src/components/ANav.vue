@@ -23,11 +23,12 @@ onUnmounted(() => {
             <ILogo :light="true" />
         </div>
         <div class="in-nav-links">
-            <a href="#">About us</a>
-            <a href="#">Focus Theme</a>
-            <a href="#">Visit Rio</a>
-            <a href="#">Organization</a>
-            <a href="#">Follow us</a>
+            <a href="#about">About us</a>
+            <a href="#themes">Focus Theme</a>
+            <a href="#visit">Visit Rio</a>
+            <a href="#ieee">Organization</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#follow">Follow us</a>
         </div>
     </div>
 </template>

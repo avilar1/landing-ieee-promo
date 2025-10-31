@@ -9,7 +9,7 @@ function show(n: number) {
 </script>
 
 <template>
-    <div class="visit-rio" v-observe="{ once: false }">
+    <div class="visit-rio" v-observe="{ once: false }" id="visit">
         <div class="visit-titl">
             <h2 class="visit-h2">Welcome to Rio: Explore the Host City</h2>
             <p class="visit-sub">Don't forget to explore the vibrant city hosting us!

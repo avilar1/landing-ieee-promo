@@ -1,5 +1,5 @@
 <template>
-    <div class="geral-ieee">
+    <div class="geral-ieee" id="ieee">
         <div class="ieee-container ieee-container-1" v-observe="{ once: false }">
             <img src="../../public/images/IEEE-MB.png" alt="logo do IEEE">
             <div class="ieee-caixa-texto-1">

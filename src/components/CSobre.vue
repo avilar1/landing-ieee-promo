@@ -1,5 +1,5 @@
 <template>
-    <div class="sobre">
+    <div class="sobre" id="about">
         <div class="in-sobre" v-observe="{ once: false }">
             <img src="../../public/images/E1.png" alt="imagem futurista do Rio de Janeiro" class="sobre-img" />
             <div class="sobre-texto">

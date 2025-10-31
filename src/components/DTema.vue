@@ -1,5 +1,5 @@
 <template>
-    <div class="tema">
+    <div class="tema" id="themes">
         <div class="tema-container" v-observe="{ once: false }">
             <h2 class="tema-h2">Shaping Tomorrow's Industry: <br /> Key Themes for IES SYP Congress 2026</h2>
 
