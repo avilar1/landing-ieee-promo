@@ -51,11 +51,22 @@
 }
 
 
-
 .ieee-container img {
     width: 268px;
     height: auto;
 }
+
+@media (max-width: 768px) {
+    .ieee-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ieee-container img {
+        width: 200px;
+    }
+}
+
 
 .ieee-container h3 {
     font-size: 22px;

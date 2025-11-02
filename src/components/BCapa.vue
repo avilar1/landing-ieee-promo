@@ -1,28 +1,65 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-import ILogo from './ILogo.vue';
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
+import ILogo from './ILogo.vue'
 
+const desktopImages = ['F0.png', 'F1.png', 'F2.png', 'F3.png', 'F4.png']
+const mobileImages = ['FM0.png', 'FM1.png', 'FM2.png', 'FM3.png', 'FM4.png', 'FM5.png']
+
+const isMobile = ref(false)
 const currentImage = ref(0)
-const images = ['F0.png', 'F1.png', 'F2.png', 'F3.png', 'F4.png']
+const currentImages = computed(() => isMobile.value ? mobileImages : desktopImages)
+
 let intervalId: number | null = null
+let mql: MediaQueryList | null = null
+
+function next() {
+    const len = currentImages.value.length
+    currentImage.value = (currentImage.value + 1) % len
+}
+
+function handleMqlChange(e: MediaQueryListEvent) {
+    isMobile.value = e.matches
+}
 
 onMounted(() => {
-    intervalId = window.setInterval(() => {
-        currentImage.value = (currentImage.value + 1) % images.length
-    }, 5000)
+    mql = window.matchMedia('(max-width: 768px)')
+    isMobile.value = mql.matches
+    if (mql) {
+        if (typeof (mql as any).addEventListener === 'function') {
+            (mql as MediaQueryList).addEventListener('change', handleMqlChange)
+        } else if (typeof (mql as any).addListener === 'function') {
+            (mql as any).addListener(handleMqlChange)
+        }
+    }
+
+    // ajustar se quiser
+    intervalId = window.setInterval(next, 5000)
 })
 
 onUnmounted(() => {
     if (intervalId !== null) {
         clearInterval(intervalId)
+        intervalId = null
     }
+    if (mql) {
+        if (typeof (mql as any).removeEventListener === 'function') {
+            (mql as MediaQueryList).removeEventListener('change', handleMqlChange)
+        } else if (typeof (mql as any).removeListener === 'function') {
+            (mql as any).removeListener(handleMqlChange)
+        }
+    }
+})
+
+
+watch(currentImages, (arr) => {
+    currentImage.value = currentImage.value % arr.length
 })
 </script>
 
 <template>
     <div class="capa">
-        <!-- Camadas de imagens com transição -->
-        <div v-for="(image, index) in images" :key="image" class="capa-bg-layer"
+        <!-- IMAGENS -->
+        <div v-for="(image, index) in currentImages" :key="image" class="capa-bg-layer"
             :class="{ active: currentImage === index }" :style="{ backgroundImage: `url(/images/${image})` }"></div>
 
         <div class="capa-content">
@@ -64,8 +101,6 @@ onUnmounted(() => {
     background-size: cover;
     opacity: 0;
     transition: opacity 1000ms ease-in-out;
-
-    /* Aplica os filtros de overlay */
     background-blend-mode: overlay, overlay, multiply, normal;
 }
 
@@ -77,11 +112,8 @@ onUnmounted(() => {
     width: 100%;
     height: 100%;
     background:
-        /* C1 - ruído */
         url('../../public/images/ruido1.png') repeat,
-        /* C2 */
         linear-gradient(rgba(31, 28, 26, 0.15), rgba(255, 251, 247, 0.15)),
-        /* C3 */
         linear-gradient(rgba(30, 25, 20, 0.3), rgba(30, 25, 20, 0.3));
     background-size: 200px 200px, cover, cover;
     background-blend-mode: overlay, overlay, multiply;
@@ -116,7 +148,6 @@ onUnmounted(() => {
     text-align: center;
     padding-top: 200px;
     font-size: 40px;
-    font-style: normal;
     font-weight: 400;
 }
 
@@ -145,5 +176,28 @@ onUnmounted(() => {
 .capa-baixo img {
     height: 40px;
     margin: 0 16px;
+}
+
+@media (max-width: 768px) {
+    .capa-h1 {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .capa-msg {
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .capa-baixo {
+        margin-bottom: 40px;
+        margin-right: 20px;
+        align-self: center;
+    }
+
+    .capa-baixo img {
+        height: 21px;
+        margin: 0 8px;
+    }
 }
 </style>

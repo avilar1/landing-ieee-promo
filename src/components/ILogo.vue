@@ -49,4 +49,24 @@ defineProps<{
     font-weight: 400;
     align-self: end;
 }
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: auto;
+        height: auto;
+    }
+
+    .logo-top,
+    .logo-bottom {
+        font-size: 6px;
+        font-weight: 400;
+    }
+
+    .logo-middle {
+        font-size: 14px;
+        font-weight: 400;
+        white-space: nowrap;
+    }
+}
 </style>

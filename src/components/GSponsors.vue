@@ -59,6 +59,14 @@
     min-width: 1120px;
 }
 
+@media (max-width: 768px) {
+    .supporters-container {
+        min-width: auto;
+        width: 90%;
+        align-items: center;
+    }
+}
+
 .supporters-box {
     display: flex;
     flex-direction: column;
@@ -83,5 +91,21 @@
 .supporters-logos img {
     width: 200px;
     height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .supporters-logos {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+
+
+    }
+
+    .supporters-logos img {
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+    }
 }
 </style>

@@ -25,6 +25,14 @@ function show(n: number) {
                 <button class="btn-visit" :class="{ active: active === 3 }" @click="show(3)">Culture & History</button>
             </nav>
 
+            <nav class="visit-nav-menu-mobile">
+                <select class="btn-visit" v-model="active">
+                    <option :value="1">Beaches & Coastline</option>
+                    <option :value="2">Natural Wonders</option>
+                    <option :value="3">Culture & History</option>
+                </select>
+            </nav>
+
             <!-- um único transition com chave, para evitar sobreposição -->
             <transition name="fade" mode="out-in">
                 <div :key="active" class="visit-imgs-cards" :class="`visit-imgs-cards-${active}`">
@@ -100,6 +108,8 @@ function show(n: number) {
     border-radius: 8px;
 }
 
+
+
 .btn-visit {
     background-color: var(--secondary-color-dark);
     color: var(--secondary-color-light);
@@ -111,6 +121,28 @@ function show(n: number) {
     line-height: 1.2;
     font-weight: 600;
     margin: 10px;
+}
+
+
+.visit-nav-menu-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .visit-nav {
+        display: none;
+    }
+
+    .visit-nav-menu-mobile {
+        display: block;
+    }
+
+    .btn-visit {
+        background-color: var(--neutral-color-dark);
+        color: var(--neutral-color-light);
+        border-radius: 8px;
+        padding: 8px;
+    }
 }
 
 /* estado visual do botão ativo */
@@ -131,6 +163,18 @@ function show(n: number) {
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .visit-imgs-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .visit-imgs-cards img {
+        width: 90%;
+        height: auto;
+    }
 }
 
 /* transição suave (fade + slide horizontal consistente) */

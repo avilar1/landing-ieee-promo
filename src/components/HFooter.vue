@@ -87,4 +87,10 @@
     background: url('../../public/images/M3.png') no-repeat center;
     background-size: cover;
 }
+
+@media (max-width: 768px) {
+    .footer-connect {
+        flex-direction: column;
+    }
+}
 </style>

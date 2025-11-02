@@ -35,10 +35,23 @@
     gap: 40px;
 }
 
+@media (max-width: 768px) {
+    .in-sobre {
+        flex-direction: column-reverse;
+        max-height: none;
+    }
+}
+
 .sobre-img {
     max-width: 346px;
     height: auto;
     border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+    .sobre-img {
+        max-width: 100%;
+    }
 }
 
 .sobre-texto {
