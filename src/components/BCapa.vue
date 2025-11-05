@@ -2,8 +2,8 @@
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import ILogo from './ILogo.vue'
 
-const desktopImages = ['F0.png', 'F1.png', 'F2.png', 'F3.png', 'F4.png']
-const mobileImages = ['FM0.png', 'FM1.png', 'FM2.png', 'FM3.png', 'FM4.png', 'FM5.png']
+const desktopImages = ['F0.webp', 'F1.webp', 'F2.webp', 'F3.webp', 'F4.webp']
+const mobileImages = ['FM0.webp', 'FM1.webp', 'FM2.webp', 'FM3.webp', 'FM4.webp', 'FM5.webp']
 
 const isMobile = ref(false)
 const currentImage = ref(0)
@@ -71,8 +71,8 @@ watch(currentImages, (arr) => {
                 </div>
             </div>
             <div class="capa-baixo">
-                <img src="../../public/images/IEEE-MB.png" alt="logo ieee mb">
-                <img src="../../public/images/IEEE-IES.png" alt="logo ieee IES">
+                <img src="../../public/images/IEEE-MB.webp" alt="logo ieee mb">
+                <img src="../../public/images/IEEE-IES.webp" alt="logo ieee IES">
                 <ILogo :light="true" />
             </div>
         </div>
@@ -112,7 +112,7 @@ watch(currentImages, (arr) => {
     width: 100%;
     height: 100%;
     background:
-        url('../../public/images/ruido1.png') repeat,
+        url('../../public/images/ruido1.webp') repeat,
         linear-gradient(rgba(31, 28, 26, 0.15), rgba(255, 251, 247, 0.15)),
         linear-gradient(rgba(30, 25, 20, 0.3), rgba(30, 25, 20, 0.3));
     background-size: 200px 200px, cover, cover;

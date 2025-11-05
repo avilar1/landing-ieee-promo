@@ -37,21 +37,21 @@ function show(n: number) {
             <transition name="fade" mode="out-in">
                 <div :key="active" class="visit-imgs-cards" :class="`visit-imgs-cards-${active}`">
                     <template v-if="active === 1">
-                        <img src="../../public/images/R11.png" alt="">
-                        <img src="../../public/images/R12.png" alt="">
-                        <img src="../../public/images/R13.png" alt="">
+                        <img src="../../public/images/R11.webp" alt="">
+                        <img src="../../public/images/R12.webp" alt="">
+                        <img src="../../public/images/R13.webp" alt="">
                     </template>
 
                     <template v-else-if="active === 2">
-                        <img src="../../public/images/R21.png" alt="">
-                        <img src="../../public/images/R22.png" alt="">
-                        <img src="../../public/images/R23.png" alt="">
+                        <img src="../../public/images/R21.webp" alt="">
+                        <img src="../../public/images/R22.webp" alt="">
+                        <img src="../../public/images/R23.webp" alt="">
                     </template>
 
                     <template v-else>
-                        <img src="../../public/images/R31.png" alt="">
-                        <img src="../../public/images/R32.png" alt="">
-                        <img src="../../public/images/R33.png" alt="">
+                        <img src="../../public/images/R31.webp" alt="">
+                        <img src="../../public/images/R32.webp" alt="">
+                        <img src="../../public/images/R33.webp" alt="">
                     </template>
                 </div>
             </transition>

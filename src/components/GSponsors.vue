@@ -5,26 +5,26 @@
             <div class="supporters-box">
                 <h4>Organized by:</h4>
                 <div class="supporters-logos">
-                    <img src="../../public/images/S11.png" alt="sponsor 1">
-                    <img src="../../public/images/S12.png" alt="sponsor 2">
+                    <img src="../../public/images/S11.webp" alt="sponsor 1">
+                    <img src="../../public/images/S12.webp" alt="sponsor 2">
                 </div>
             </div>
             <div class="supporters-box">
                 <h4>Supported by:</h4>
                 <div class="supporters-logos">
-                    <img src="../../public/images/S11.png" alt="sponsor 1">
-                    <img src="../../public/images/S22.png" alt="sponsor 2">
-                    <img src="../../public/images/S12.png" alt="sponsor 3">
-                    <img src="../../public/images/S11.png" alt="sponsor 4">
+                    <img src="../../public/images/S11.webp" alt="sponsor 1">
+                    <img src="../../public/images/S22.webp" alt="sponsor 2">
+                    <img src="../../public/images/S12.webp" alt="sponsor 3">
+                    <img src="../../public/images/S11.webp" alt="sponsor 4">
                 </div>
             </div>
             <div class="supporters-box">
                 <h4>Other partnerships:</h4>
                 <div class="supporters-logos">
-                    <img src="../../public/images/S11.png" alt="sponsor 1">
-                    <img src="../../public/images/S12.png" alt="sponsor 2">
-                    <img src="../../public/images/S22.png" alt="sponsor 3">
-                    <img src="../../public/images/S12.png" alt="sponsor 4">
+                    <img src="../../public/images/S11.webp" alt="sponsor 1">
+                    <img src="../../public/images/S12.webp" alt="sponsor 2">
+                    <img src="../../public/images/S22.webp" alt="sponsor 3">
+                    <img src="../../public/images/S12.webp" alt="sponsor 4">
                 </div>
             </div>
         </div>

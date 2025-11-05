@@ -1,7 +1,7 @@
 <template>
     <div class="sobre" id="about">
         <div class="in-sobre" v-observe="{ once: false }">
-            <img src="../../public/images/E1.png" alt="imagem futurista do Rio de Janeiro" class="sobre-img" />
+            <img src="../../public/images/E1.webp" alt="imagem futurista do Rio de Janeiro" class="sobre-img" />
             <div class="sobre-texto">
                 <h2 class="sobre-h2">IEEE IES SYP Congress 2026: The Future of Industrial Technology</h2>
                 <p class="sobre-p">Join the IEEE IES SYP Congress 2026 in vibrant Rio de Janeiro, a premier

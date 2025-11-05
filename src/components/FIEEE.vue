@@ -1,7 +1,7 @@
 <template>
     <div class="geral-ieee" id="ieee">
         <div class="ieee-container ieee-container-1" v-observe="{ once: false }">
-            <img src="../../public/images/IEEE-MB.png" alt="logo do IEEE">
+            <img src="../../public/images/IEEE-MB.webp" alt="logo do IEEE">
             <div class="ieee-caixa-texto-1">
                 <h3>Get to Know IEEE: Building the Future of Technology, Together</h3>
                 <p>The Institute of Electrical and Electronics Engineers (IEEE) is the world’s largest technical
@@ -22,7 +22,7 @@
                     The society aims to foster innovation, support career development, and promote knowledge sharing for
                     the benefit of industry and humanity.</p>
             </div>
-            <img src="../../public/images/IEEE-IES.png" alt="logo da IEEE-IES">
+            <img src="../../public/images/IEEE-IES.webp" alt="logo da IEEE-IES">
         </div>
     </div>
 </template>

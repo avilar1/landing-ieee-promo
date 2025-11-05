@@ -34,9 +34,9 @@ import { ref, onMounted, onUnmounted, computed, watch } from 'vue'
 type Slide = { src: string; alt: string }
 
 const slides: Slide[] = [
-    { src: '/images/G1.png', alt: 'um braço robótico e uma mão humana de encontro a se cumprimentar' },
-    { src: '/images/G2.png', alt: 'uma impressão digital em alto relevo' },
-    { src: '/images/G3.png', alt: 'uma mulher símbolo da justiça cega, olhos vendados e balança' }
+    { src: '/images/G1.webp', alt: 'um braço robótico e uma mão humana de encontro a se cumprimentar' },
+    { src: '/images/G2.webp', alt: 'uma impressão digital em alto relevo' },
+    { src: '/images/G3.webp', alt: 'uma mulher símbolo da justiça cega, olhos vendados e balança' }
 ]
 
 const current = ref(0)
