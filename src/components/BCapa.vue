@@ -64,10 +64,10 @@ watch(currentImages, (arr) => {
 
         <div class="capa-content">
             <div class="capa-principal">
-                <h1 class="capa-h1">3rd IEEE IES Students and Young Professionals Congress</h1>
+                <h1 class="capa-h1">3RD IEEE IES STUDENTS AND <br /> YOUNG PROFESSIONALS CONGRESS</h1>
                 <div class="capa-msg-container">
-                    <p class="capa-msg">August 6-8, 2026</p>
-                    <p class="capa-msg">Rio de Janeiro, Brazil</p>
+                    <p class="capa-msg capa-msg-1">August 6-8, 2026</p>
+                    <p class="capa-msg capa-msg-2">RIO DE JANEIRO, BRAZIL</p>
                 </div>
             </div>
             <div class="capa-baixo">
@@ -137,6 +137,7 @@ watch(currentImages, (arr) => {
 }
 
 .capa-principal {
+    font-family: "Righteous";
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -145,9 +146,10 @@ watch(currentImages, (arr) => {
 
 .capa-h1 {
     color: var(--neutral-color-light);
+
     text-align: center;
     padding-top: 200px;
-    font-size: 40px;
+    font-size: 64px;
     font-weight: 400;
 }
 
@@ -157,9 +159,19 @@ watch(currentImages, (arr) => {
 
 .capa-msg {
     color: var(--neutral-color-light);
-    font-size: 64px;
-    margin: 4px 0;
-    font-weight: 600;
+    font-size: 36px;
+    margin: 12px 0;
+    font-weight: 400;
+}
+
+.capa-msg-1 {
+    color: var(--primary-color);
+}
+
+.capa-msg-2 {
+    font-family: "Archivo";
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .capa-baixo {
@@ -180,12 +192,12 @@ watch(currentImages, (arr) => {
 
 @media (max-width: 768px) {
     .capa-h1 {
-        font-size: 24px;
+        font-size: 32px;
         font-weight: 400;
     }
 
     .capa-msg {
-        font-size: 32px;
+        font-size: 24px;
         font-weight: 600;
     }
 
