@@ -127,6 +127,7 @@
 <script setup lang="ts">
 // filepath: d:\arquivosDeEstudo\oficial-ladding\ladding-oficial\src\components\JTeam.vue
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+import type { Ref } from 'vue'
 
 const carousel1 = ref<HTMLElement | null>(null)
 const carousel2 = ref<HTMLElement | null>(null)
@@ -189,26 +190,32 @@ function usePingPong(elRef: typeof carousel1, opts?: { speed?: number; startAtEn
 
 const pp1 = usePingPong(carousel1, { speed: 0.6, startAtEnd: false })
 const pp2 = usePingPong(carousel2, { speed: 0.6, startAtEnd: true })
+function getElement(elOrRef: Ref<HTMLElement | null> | HTMLElement | null): HTMLElement | null {
+    if (!elOrRef) return null
+    if (typeof elOrRef === 'object' && 'value' in elOrRef) return (elOrRef as Ref<HTMLElement | null>).value
+    return elOrRef as HTMLElement | null
+}
 
-function scrollLeft(elRef: typeof carousel1) {
-    const el = elRef.value
+function scrollLeft(elOrRef: Ref<HTMLElement | null> | HTMLElement | null) {
+    const el = getElement(elOrRef)
     if (!el) return
     const step = getStep(el)
-    const pp = elRef === carousel1 ? pp1 : pp2
+    const pp = el === carousel1.value ? pp1 : pp2
     pp.pause()
     el.scrollBy({ left: -step, behavior: 'smooth' })
     window.setTimeout(pp.resume, 600)
 }
 
-function scrollRight(elRef: typeof carousel1) {
-    const el = elRef.value
+function scrollRight(elOrRef: Ref<HTMLElement | null> | HTMLElement | null) {
+    const el = getElement(elOrRef)
     if (!el) return
     const step = getStep(el)
-    const pp = elRef === carousel1 ? pp1 : pp2
+    const pp = el === carousel1.value ? pp1 : pp2
     pp.pause()
     el.scrollBy({ left: step, behavior: 'smooth' })
     window.setTimeout(pp.resume, 600)
 }
+
 </script>
 
 <style scoped>
