@@ -5,14 +5,20 @@ defineProps<{
 </script>
 
 <template>
-    <div class="logo">
-        <span class="logo-ttp logo-top" :class="{ light }">3rd IEEE IES</span>
-        <span class="logo-ttp logo-middle" :class="{ light }">SYP CONGRESS</span>
-        <span class="logo-ttp logo-bottom" :class="{ light }">BRAZIL 2026</span>
-    </div>
+    <a href="/" class="logo">
+        <div class="logo">
+            <span class="logo-ttp logo-top" :class="{ light }">3rd IEEE IES</span>
+            <span class="logo-ttp logo-middle" :class="{ light }">SYP CONGRESS</span>
+            <span class="logo-ttp logo-bottom" :class="{ light }">BRAZIL 2026</span>
+        </div>
+    </a>
 </template>
 
 <style scoped>
+a {
+    text-decoration: none;
+}
+
 .logo {
     font-family: "Righteous", cursive;
     height: 60px;

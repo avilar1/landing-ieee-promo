@@ -1,30 +1,54 @@
 <template>
-    <div class="supporters-geral" id="sponsors">
+    
+    <div class="supporters-geral" id="Supporters">
         <div class="supporters-container">
             <h2 class="supporters-h2">Organization & Sponsorship</h2>
+
             <div class="supporters-box">
-                <h4>Organized by:</h4>
+                <h4>Organizers:</h4>
                 <div class="supporters-logos">
-                    <img src="../../public/images/S11.webp" alt="sponsor 1">
-                    <img src="../../public/images/S12.webp" alt="sponsor 2">
+                    <div class="supporters-track-M">
+                        <img src="../../public/images/NewIEEE.webp" alt="sponsor 1" class="ieee-img">
+                        <img src="../../public/images/NewIES.webp" alt="sponsor 2" class="ieee-img">
+                        <img src="../../public/images/NewCEFET.webp" alt="sponsor 3" class="ieee-img">
+                        <img src="../../public/images/NewIEEE.webp" alt="sponsor 1" class="ieee-img img-extra-mobile">
+                        <img src="../../public/images/NewIES.webp" alt="sponsor 2" class="ieee-img img-extra-mobile">
+                        <img src="../../public/images/NewCEFET.webp" alt="sponsor 3" class="ieee-img img-extra-mobile">
+                    </div>
                 </div>
             </div>
+
             <div class="supporters-box">
-                <h4>Supported by:</h4>
+                <h4>Supporters:</h4>
                 <div class="supporters-logos">
-                    <img src="../../public/images/S11.webp" alt="sponsor 1">
-                    <img src="../../public/images/S22.webp" alt="sponsor 2">
-                    <img src="../../public/images/S12.webp" alt="sponsor 3">
-                    <img src="../../public/images/S11.webp" alt="sponsor 4">
+                    <div class="supporters-track-M">
+                        <img src="../../public/images/I1.webp" alt="sponsor 1" class="ieee-img">
+                        <img src="../../public/images/I2.webp" alt="sponsor 2" class="ieee-img">
+                        <img src="../../public/images/I1.webp" alt="sponsor 1" class="ieee-img img-extra-mobile">
+                        <img src="../../public/images/I2.webp" alt="sponsor 2" class="ieee-img img-extra-mobile">
+                    </div>
                 </div>
             </div>
+
             <div class="supporters-box">
-                <h4>Other partnerships:</h4>
+                <h4>University Supporters:</h4>
+                <!-- viewport -->
                 <div class="supporters-logos">
-                    <img src="../../public/images/S11.webp" alt="sponsor 1">
-                    <img src="../../public/images/S12.webp" alt="sponsor 2">
-                    <img src="../../public/images/S22.webp" alt="sponsor 3">
-                    <img src="../../public/images/S12.webp" alt="sponsor 4">
+                    <!-- trilho animado (conteúdo duplicado para loop suave) -->
+                    <div class="supporters-track supporter-track-1">
+
+                        <img src="../../public/images/I3.webp" alt="sponsor 1" class="ieee-img">
+                        <img src="../../public/images/I4.webp" alt="sponsor 2" class="ieee-img">
+                        <img src="../../public/images/I5.webp" alt="sponsor 3" class="ieee-img">
+                        <img src="../../public/images/I6.webp" alt="sponsor 4" class="ieee-img">
+                        <img src="../../public/images/I7.webp" alt="sponsor 5" class="ieee-img">
+                        <img src="../../public/images/I8.webp" alt="sponsor 6" class="ieee-img">
+                        <img src="../../public/images/I9.webp" alt="sponsor 7" class="ieee-img">
+                        <img src="../../public/images/I10.webp" alt="sponsor 8" class="ieee-img">
+                        <img src="../../public/images/I11.webp" alt="sponsor 9" class="ieee-img">
+                        <img src="../../public/images/I12.webp" alt="sponsor 10" class="ieee-img">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,6 +65,7 @@
 }
 
 .supporters-h2 {
+    font-family: "Archivo";
     font-size: 32px;
     font-weight: 700;
     text-align: center;
@@ -56,10 +81,11 @@
     justify-content: space-around;
     align-items: start;
     padding: 2rem 0;
-    min-width: 1120px;
+    max-width: 1120px;
+    width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1120px) {
     .supporters-container {
         min-width: auto;
         width: 90%;
@@ -72,6 +98,9 @@
     flex-direction: column;
     align-items: start;
     margin-bottom: 2rem;
+    width: 100%;
+    min-width: 0;
+
 }
 
 .supporters-box h4 {
@@ -80,32 +109,70 @@
     margin-bottom: 1rem;
 }
 
+
 .supporters-logos {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    height: 85px;
+    overflow: hidden;
+
+    box-sizing: border-box;
 }
 
-.supporters-logos img {
-    width: 200px;
-    height: auto;
+.ieee-img {
+    height: 75px;
+    width: auto;
+    flex: 0 0 auto;
+    object-fit: contain;
+    margin-right: 2rem;
 }
 
+.supporter-track-1 {
+    height: 85px;
+}
+
+.img-extra-mobile {
+    display: none;
+}
 
 @media (max-width: 768px) {
-    .supporters-logos {
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        justify-content: center;
-
+    .supporters-track-M {
+        animation: marquee 8s linear infinite;
+        flex-wrap: nowrap;
+        will-change: transform;
+        display: flex;
 
     }
 
-    .supporters-logos img {
-        flex: 0 0 auto;
-        scroll-snap-align: center;
+    .img-extra-mobile {
+        display: inline;
     }
+}
+
+
+.supporters-track {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    will-change: transform;
+    animation: marquee 8s linear infinite;
+}
+
+.supporters-track:hover {
+    animation-play-state: paused;
+
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+
 }
 </style>

@@ -187,7 +187,7 @@ watch(currentImages, (arr) => {
 
 .capa-baixo img {
     height: 40px;
-    margin: 0 16px;
+    margin: 0 16px 16px;
 }
 
 @media (max-width: 768px) {
