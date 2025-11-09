@@ -66,7 +66,7 @@ onUnmounted(() => {
             <a href="#themes" @click="closeMenu">Focus Theme</a>
             <a href="#visit" @click="closeMenu">Visit Rio</a>
             <a href="#ieee" @click="closeMenu">Organization</a>
-            <a href="#sponsors" @click="closeMenu">Sponsors</a>
+            <a href="#Supporters" @click="closeMenu">Supporters</a>
             <a href="#follow" @click="closeMenu">Follow us</a>
             <a href="/sponsorship" @click="closeMenu">Sponsorship</a>
         </nav>

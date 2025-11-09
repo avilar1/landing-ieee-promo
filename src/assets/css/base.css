@@ -151,6 +151,7 @@ table {
   font-display: swap;
 }
 :root {
+  color-scheme: light;
   --primary-color-light: #fff9ed;
   --primary-color: #f5a214;
   --primary-color-dark: #523606;

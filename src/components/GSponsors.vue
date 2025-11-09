@@ -1,5 +1,5 @@
 <template>
-    
+
     <div class="supporters-geral" id="Supporters">
         <div class="supporters-container">
             <h2 class="supporters-h2">Organization & Sponsorship</h2>
@@ -54,6 +54,29 @@
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+import { onMounted, onBeforeUnmount } from 'vue'
+
+function setDistances() {
+    // para cada trilho dentro do viewport
+    document.querySelectorAll<HTMLElement>('.supporters-logos').forEach(view => {
+        const track = view.querySelector<HTMLElement>('.supporters-track, .supporters-track-M')
+        if (!track) return
+        const dist = Math.max(0, track.scrollWidth - view.clientWidth)
+        track.style.setProperty('--dist', `-${dist}px`)
+    })
+}
+
+onMounted(() => {
+    setDistances()
+    window.addEventListener('resize', setDistances)
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('resize', setDistances)
+})
+</script>
 
 <style scoped>
 .supporters-geral {
@@ -115,7 +138,6 @@
     max-width: 100%;
     height: 85px;
     overflow: hidden;
-
     box-sizing: border-box;
 }
 
@@ -135,44 +157,38 @@
     display: none;
 }
 
-@media (max-width: 768px) {
-    .supporters-track-M {
-        animation: marquee 8s linear infinite;
-        flex-wrap: nowrap;
-        will-change: transform;
-        display: flex;
-
-    }
-
-    .img-extra-mobile {
-        display: inline;
-    }
-}
-
-
-.supporters-track {
+/* Trilho: usa ping‑pong como no FIEEE */
+.supporters-track,
+.supporters-track-M {
+    --dist: -600px;
+    /* fallback */
     display: flex;
     align-items: center;
     gap: 2rem;
     flex-wrap: nowrap;
     will-change: transform;
-    animation: marquee 8s linear infinite;
+    animation: ping 10s linear infinite alternate;
 }
 
-.supporters-track:hover {
+.supporters-track:hover,
+.supporters-track-M:hover {
     animation-play-state: paused;
-
 }
 
-@keyframes marquee {
-    0% {
+@keyframes ping {
+    from {
         transform: translateX(0);
     }
 
-    100% {
-        transform: translateX(-50%);
+    to {
+        transform: translateX(var(--dist));
     }
+}
 
-
+/* Se quiser duplicar logos no mobile, apenas exibe extras */
+@media (max-width: 768px) {
+    .img-extra-mobile {
+        display: inline;
+    }
 }
 </style>

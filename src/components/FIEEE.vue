@@ -43,7 +43,7 @@
                 humanity</p>
 
             <div ref="carrossel" class="ieee-carrossel">
-                <div class="ieee-carrossel-track">
+                <div ref="track" class="ieee-carrossel-track">
                     <img class="ieee-carrossel-img" src="../../public/images/I1.webp" alt="logo do VISIT RIO">
                     <img class="ieee-carrossel-img" src="../../public/images/I2.webp" alt="logo da prefeitura do Rio">
                     <img class="ieee-carrossel-img" src="../../public/images/I3.webp" alt="logo da UFSC">
@@ -56,7 +56,6 @@
                     <img class="ieee-carrossel-img" src="../../public/images/I10.webp" alt="logo da PPGES">
                     <img class="ieee-carrossel-img" src="../../public/images/I11.webp" alt="logo da profComp">
                     <img class="ieee-carrossel-img" src="../../public/images/I12.webp" alt="logo da AutomacaoUFSC">
-
                 </div>
             </div>
 
@@ -65,6 +64,27 @@
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+const carrossel = ref<HTMLElement | null>(null)
+const track = ref<HTMLElement | null>(null)
+
+function setDistance() {
+    if (!carrossel.value || !track.value) return
+    const dist = track.value.scrollWidth - carrossel.value.clientWidth
+    track.value.style.setProperty('--dist', `-${dist}px`)
+}
+
+onMounted(() => {
+    setDistance()
+    window.addEventListener('resize', setDistance)
+})
+onBeforeUnmount(() => {
+    window.removeEventListener('resize', setDistance)
+})
+</script>
 
 <style scoped>
 .geral-ieee {
@@ -164,24 +184,22 @@
 }
 
 .ieee-carrossel-track {
+    --dist: -600px;
+    /* valor fallback */
     display: flex;
     gap: 2rem;
     padding: 1rem 0;
-    animation: scroll 9s linear infinite;
+    animation: ping 8s linear infinite alternate;
+    will-change: transform;
 }
 
-.ieee-carrossel-track::after {
-    content: "";
-    display: flex;
-}
-
-@keyframes scroll {
-    0% {
+@keyframes ping {
+    from {
         transform: translateX(0);
     }
 
-    100% {
-        transform: translateX(-50%);
+    to {
+        transform: translateX(var(--dist));
     }
 }
 
