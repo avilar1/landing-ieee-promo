@@ -66,11 +66,12 @@ function show(n: number) {
 <style scoped>
 .visit-rio {
     width: 100%;
-    background-color: var(--neutral-color-light);
+    background-color: var(--neutral-color-dark);
     padding: 64px 0;
 }
 
 .visit-titl {
+    color: var(--neutral-color-light);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,15 +105,15 @@ function show(n: number) {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    background-color: var(--secondary-color-dark);
+    background-color: var(--secondary-color-light);
     border-radius: 8px;
 }
 
 
 
 .btn-visit {
-    background-color: var(--secondary-color-dark);
-    color: var(--secondary-color-light);
+    background-color: var(--secondary-color-light);
+    color: var(--secondary-color-dark);
     border: none;
     padding: 8px 12px;
     border-radius: 4px;
@@ -138,8 +139,8 @@ function show(n: number) {
     }
 
     .btn-visit {
-        background-color: var(--neutral-color-dark);
-        color: var(--neutral-color-light);
+        background-color: var(--neutral-color-light);
+        color: var(--primary-color);
         border-radius: 8px;
         padding: 8px;
     }
@@ -147,8 +148,8 @@ function show(n: number) {
 
 /* estado visual do botão ativo */
 .btn-visit.active {
-    background-color: var(--secondary-color-light);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--neutral-color-light);
     transition: background-color 200ms ease, color 200ms ease;
 }
 
