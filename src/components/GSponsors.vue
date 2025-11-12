@@ -5,7 +5,7 @@
             <h2 class="supporters-h2">Organization & Sponsorship</h2>
 
             <div class="supporters-box" v-observe>
-                <h4>Organizers:</h4>
+                <h3>Organizers:</h3>
                 <div class="supporters-logos">
                     <div class="supporters-track-M">
                         <img src="/images/NewIEEE.webp" alt="sponsor 1" class="ieee-img">
@@ -16,7 +16,7 @@
             </div>
 
             <div class="supporters-box" v-observe>
-                <h4>Supporters:</h4>
+                <h3>Supporters:</h3>
                 <div class="supporters-logos">
                     <div class="supporters-track-M">
                         <img src="/images/I1.webp" alt="sponsor 1" class="ieee-img">
@@ -26,7 +26,7 @@
             </div>
 
             <div class="supporters-box" v-observe>
-                <h4>University Supporters:</h4>
+                <h3>University Supporters:</h3>
 
                 <div class="supporters-logos">
 
@@ -102,7 +102,7 @@
 
 }
 
-.supporters-box h4 {
+.supporters-box h3 {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 1rem;
