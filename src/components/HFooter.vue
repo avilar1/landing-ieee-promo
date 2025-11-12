@@ -6,9 +6,15 @@
             Follow us across all platforms to engage with fellow attendees, industry leaders, and the IES community
             before, during, and after the Congress.</p>
         <div class="footer-connect">
-            <button class="btn-footer"><i class="fa-instagram"></i> Instagram</button>
-            <button class="btn-footer"><i class="fa-ieee"></i> IEEE Collabratec</button>
-            <button class="btn-footer"><i class="fa-facebook"></i> Facebook</button>
+            <a class="btn-footer" href="https://www.instagram.com/ieee_ies_syp" target="_blank"
+                rel="noopener noreferrer"><i class="fa-instagram"></i>
+                Instagram</a>
+            <a class="btn-footer" href="https://www.linkedin.com/company/iessyp25/" target="_blank"
+                rel="noopener noreferrer"><i class="fa-ieee"></i> IEEE
+                Collabratec</a>
+            <a class="btn-footer" href="https://www.facebook.com/share/1A67tMc8WN/" target="_blank"
+                rel="noopener noreferrer"><i class="fa-facebook"></i>
+                Facebook</a>
         </div>
     </div>
 </template>
@@ -60,6 +66,8 @@
     font-weight: 600;
     line-height: 1.2;
     box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25);
+
+    text-decoration: none;
 
     display: flex;
     align-items: center;
