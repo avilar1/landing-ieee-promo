@@ -5,14 +5,20 @@
 
             <!-- Desktop: galeria lado a lado -->
             <div v-if="!isMobile" class="tema-gallery">
-                <img v-for="s in slides" :key="s.src" :src="s.src" :alt="s.alt" class="tema-img-grid" />
+                <div v-for="s in slides" :key="s.src" class="tema-card">
+                    <img :src="s.src" :alt="s.alt" class="tema-img-grid" />
+                    <p class="tema-label">{{ s.label }}</p>
+                </div>
             </div>
 
             <!-- Mobile: slider -->
             <div v-else class="tema-slider" @mouseenter="pause" @mouseleave="resume">
                 <transition name="tema-fade" mode="out-in">
                     <div class="tema-slide" :key="current">
-                        <img v-if="currentSlide" :src="currentSlide.src" :alt="currentSlide.alt" class="tema-img" />
+                        <div v-if="currentSlide" class="tema-card">
+                            <img :src="currentSlide.src" :alt="currentSlide.alt" class="tema-img" />
+                            <p class="tema-label">{{ currentSlide.label }}</p>
+                        </div>
                     </div>
                 </transition>
 
@@ -31,12 +37,24 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed, watch } from 'vue'
 
-type Slide = { src: string; alt: string }
+type Slide = { src: string; alt: string; label: string }
 
 const slides: Slide[] = [
-    { src: '/images/G1.webp', alt: 'um braço robótico e uma mão humana de encontro a se cumprimentar' },
-    { src: '/images/G2.webp', alt: 'uma impressão digital em alto relevo' },
-    { src: '/images/G3.webp', alt: 'uma mulher símbolo da justiça cega, olhos vendados e balança' }
+    {
+        src: '/images/G1.webp',
+        alt: 'um braço robótico e uma mão humana de encontro a se cumprimentar',
+        label: 'Artificial Intelligence'
+    },
+    {
+        src: '/images/G2.webp',
+        alt: 'uma impressão digital em alto relevo',
+        label: 'Cybersecurity'
+    },
+    {
+        src: '/images/G3.webp',
+        alt: 'uma mulher símbolo da justiça cega, olhos vendados e balança',
+        label: 'Ethics'
+    }
 ]
 
 const current = ref(0)
@@ -134,14 +152,40 @@ watch(isMobile, (val) => {
     gap: 24px;
 }
 
-.tema-img-grid {
+/* Card (wrapper para imagem + rótulo) */
+.tema-card {
+    position: relative;
     width: 268px;
     height: 400px;
-    object-fit: cover;
-    object-position: center;
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tema-img-grid,
+.tema-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
+}
+
+.tema-label {
+    font-family: "Archivo";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--neutral-color-light);
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px 8px;
+    margin: 0;
 }
 
 /* Mobile: slider */
@@ -153,24 +197,13 @@ watch(isMobile, (val) => {
     justify-content: center;
     align-items: center;
     padding: 8px 48px;
-    /* espaço para as setas */
     box-sizing: border-box;
 }
 
 .tema-slide {
     max-width: 268px;
-    max-height: 400px;
-    overflow: hidden;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.tema-img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
 /* Transição suave */
@@ -198,6 +231,7 @@ watch(isMobile, (val) => {
     cursor: pointer;
     display: grid;
     place-items: center;
+    z-index: 2;
 }
 
 .tema-prev {
@@ -231,21 +265,16 @@ watch(isMobile, (val) => {
     background: var(--primary-color);
 }
 
-/* Mobile: ocupa toda a largura e reduz altura */
 @media (max-width: 768px) {
     .tema-slider {
         max-width: 100%;
         padding: 0 40px;
     }
 
-    .tema-slide {
-        max-width: 90%;
-    }
-
-    .tema-img {
+    .tema-card {
+        width: 90%;
+        max-width: 268px;
         height: 300px;
     }
-
-    /* A galeria não aparece no mobile (já está controlado por v-if) */
 }
 </style>
