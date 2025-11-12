@@ -7,7 +7,7 @@
                 <div class="team-carousel" ref="carousel1">
                     <div class="team-track">
                         <div class="team-card">
-                            <img src="../../images/MEM1.webp" alt="imagem do membro Leandro Buss Becker">
+                            <img src="/images/MEM1.webp" alt="imagem do membro Leandro Buss Becker">
                             <div class="team-card-text">
                                 <h3>Chairperson</h3>
                                 <h4>Leandro Buss Becker</h4>
@@ -16,7 +16,7 @@
                             </div>
                         </div>
                         <div class="team-card">
-                            <img src="../../images/MEM2.webp" alt="imagem do membro Carlos Eduardo Pantoja">
+                            <img src="/images/MEM2.webp" alt="imagem do membro Carlos Eduardo Pantoja">
                             <div class="team-card-text">
                                 <h3>Head of Program</h3>
                                 <h4>Carlos Eduardo Pantoja</h4>
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="team-card">
-                            <img src="../../images/MEM3.webp" alt="imagem do membro Thomas Moreira Campello">
+                            <img src="/images/MEM3.webp" alt="imagem do membro Thomas Moreira Campello">
                             <div class="team-card-text">
                                 <h3>Treasurer</h3>
                                 <h4>Thomas Moreira Campello</h4>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="team-card">
-                            <img src="../../images/MEM4.webp" alt="imagem do membro Diego Cardoso Borda Castro">
+                            <img src="/images/MEM4.webp" alt="imagem do membro Diego Cardoso Borda Castro">
                             <div class="team-card-text">
                                 <h3>Secretary</h3>
                                 <h4>Diego Cardoso Borda Castro</h4>
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         <div class="team-card">
-                            <img src="../../images/MEM5.webp" alt="imagem do membro Janislley Oliveira de Sousa">
+                            <img src="/images/MEM5.webp" alt="imagem do membro Janislley Oliveira de Sousa">
                             <div class="team-card-text">
                                 <h3>Head of Young Professionals</h3>
                                 <h4>Janislley Oliveira de Sousa</h4>
@@ -58,7 +58,7 @@
 
 
                         <div class="team-card">
-                            <img src="../../images/MEM6.webp" alt="imagem do membro João Teixeira de Carvalho Neto">
+                            <img src="/images/MEM6.webp" alt="imagem do membro João Teixeira de Carvalho Neto">
                             <div class="team-card-text">
                                 <h3>Head of Technical Activities</h3>
                                 <h4>João Teixeira de Carvalho Neto</h4>
@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="team-card">
-                            <img src="../../images/MEM7.webp" alt="imagem do membro Marco Aurélio Wehrmeister">
+                            <img src="/images/MEM7.webp" alt="imagem do membro Marco Aurélio Wehrmeister">
                             <div class="team-card-text">
                                 <h3>Head of Sponsorship</h3>
                                 <h4>Marco Aurélio Wehrmeister</h4>
@@ -76,7 +76,7 @@
                             </div>
                         </div>
                         <div class="team-card">
-                            <img src="../../images/MEM8.webp" alt="imagem do membro Vladimir Marques Erthal">
+                            <img src="/images/MEM8.webp" alt="imagem do membro Vladimir Marques Erthal">
                             <div class="team-card-text">
                                 <h3>Webmaster</h3>
                                 <h4>Vladimir Marques Erthal</h4>
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="team-card">
-                            <img src="../../images/MEM0.webp"
+                            <img src="/images/MEM0.webp"
                                 alt="imagem vazia apenas com fundo cinza pois não há foto do membro disponível">
                             <div class="team-card-text">
                                 <h3>Head of Meals and Accommodation</h3>
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                         <div class="team-card">
-                            <img src="../../images/MEM9.webp" alt="imagem do membro Fernando Santos Berçot">
+                            <img src="/images/MEM9.webp" alt="imagem do membro Fernando Santos Berçot">
                             <div class="team-card-text">
                                 <h3>Head of Social Activities</h3>
                                 <h4>Fernando Santos Berçot</h4>

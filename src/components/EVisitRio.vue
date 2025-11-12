@@ -37,21 +37,21 @@ function show(n: number) {
             <transition name="fade" mode="out-in">
                 <div :key="active" class="visit-imgs-cards" :class="`visit-imgs-cards-${active}`">
                     <template v-if="active === 1">
-                        <img src="../../images/R11.webp" alt="">
-                        <img src="../../images/R12.webp" alt="">
-                        <img src="../../images/R13.webp" alt="">
+                        <img src="/images/R11.webp" alt="">
+                        <img src="/images/R12.webp" alt="">
+                        <img src="/images/R13.webp" alt="">
                     </template>
 
                     <template v-else-if="active === 2">
-                        <img src="../../images/R21.webp" alt="">
-                        <img src="../../images/R22.webp" alt="">
-                        <img src="../../images/R23.webp" alt="">
+                        <img src="/images/R21.webp" alt="">
+                        <img src="/images/R22.webp" alt="">
+                        <img src="/images/R23.webp" alt="">
                     </template>
 
                     <template v-else>
-                        <img src="../../images/R31.webp" alt="">
-                        <img src="../../images/R32.webp" alt="">
-                        <img src="../../images/R33.webp" alt="">
+                        <img src="/images/R31.webp" alt="">
+                        <img src="/images/R32.webp" alt="">
+                        <img src="/images/R33.webp" alt="">
                     </template>
                 </div>
             </transition>

@@ -74,17 +74,17 @@
 }
 
 .fa-instagram {
-    background: url('../../images/M1.webp') no-repeat center;
+    background: url('/images/M1.webp') no-repeat center;
     background-size: cover;
 }
 
 .fa-ieee {
-    background: url('../../images/M2.webp') no-repeat center;
+    background: url('/images/M2.webp') no-repeat center;
     background-size: cover;
 }
 
 .fa-facebook {
-    background: url('../../images/M3.webp') no-repeat center;
+    background: url('/images/M3.webp') no-repeat center;
     background-size: cover;
 }
 

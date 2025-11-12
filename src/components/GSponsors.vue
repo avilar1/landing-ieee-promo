@@ -8,9 +8,9 @@
                 <h4>Organizers:</h4>
                 <div class="supporters-logos">
                     <div class="supporters-track-M">
-                        <img src="../../images/NewIEEE.webp" alt="sponsor 1" class="ieee-img">
-                        <img src="../../images/NewIES.webp" alt="sponsor 2" class="ieee-img">
-                        <img src="../../images/NewCEFET.webp" alt="sponsor 3" class="ieee-img">
+                        <img src="/images/NewIEEE.webp" alt="sponsor 1" class="ieee-img">
+                        <img src="/images/NewIES.webp" alt="sponsor 2" class="ieee-img">
+                        <img src="/images/NewCEFET.webp" alt="sponsor 3" class="ieee-img">
                     </div>
                 </div>
             </div>
@@ -19,8 +19,8 @@
                 <h4>Supporters:</h4>
                 <div class="supporters-logos">
                     <div class="supporters-track-M">
-                        <img src="../../images/I1.webp" alt="sponsor 1" class="ieee-img">
-                        <img src="../../images/I2.webp" alt="sponsor 2" class="ieee-img">
+                        <img src="/images/I1.webp" alt="sponsor 1" class="ieee-img">
+                        <img src="/images/I2.webp" alt="sponsor 2" class="ieee-img">
                     </div>
                 </div>
             </div>
@@ -32,16 +32,16 @@
 
                     <div class="supporters-track supporter-track-1">
 
-                        <img src="../../images/I3.webp" alt="sponsor 1" class="ieee-img">
-                        <img src="../../images/I4.webp" alt="sponsor 2" class="ieee-img">
-                        <img src="../../images/I5.webp" alt="sponsor 3" class="ieee-img">
-                        <img src="../../images/I6.webp" alt="sponsor 4" class="ieee-img">
-                        <img src="../../images/I7.webp" alt="sponsor 5" class="ieee-img">
-                        <img src="../../images/I8.webp" alt="sponsor 6" class="ieee-img">
-                        <img src="../../images/I9.webp" alt="sponsor 7" class="ieee-img">
-                        <img src="../../images/I10.webp" alt="sponsor 8" class="ieee-img">
-                        <img src="../../images/I11.webp" alt="sponsor 9" class="ieee-img">
-                        <img src="../../images/I12.webp" alt="sponsor 10" class="ieee-img">
+                        <img src="/images/I3.webp" alt="sponsor 1" class="ieee-img">
+                        <img src="/images/I4.webp" alt="sponsor 2" class="ieee-img">
+                        <img src="/images/I5.webp" alt="sponsor 3" class="ieee-img">
+                        <img src="/images/I6.webp" alt="sponsor 4" class="ieee-img">
+                        <img src="/images/I7.webp" alt="sponsor 5" class="ieee-img">
+                        <img src="/images/I8.webp" alt="sponsor 6" class="ieee-img">
+                        <img src="/images/I9.webp" alt="sponsor 7" class="ieee-img">
+                        <img src="/images/I10.webp" alt="sponsor 8" class="ieee-img">
+                        <img src="/images/I11.webp" alt="sponsor 9" class="ieee-img">
+                        <img src="/images/I12.webp" alt="sponsor 10" class="ieee-img">
 
                     </div>
                 </div>

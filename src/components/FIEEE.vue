@@ -44,18 +44,18 @@
 
             <div ref="carrossel" class="ieee-carrossel">
                 <div ref="track" class="ieee-carrossel-track">
-                    <img class="ieee-carrossel-img" src="../../images/I1.webp" alt="logo do VISIT RIO">
-                    <img class="ieee-carrossel-img" src="../../images/I2.webp" alt="logo da prefeitura do Rio">
-                    <img class="ieee-carrossel-img" src="../../images/I3.webp" alt="logo da UFSC">
-                    <img class="ieee-carrossel-img" src="../../images/I4.webp" alt="logo do IFF">
-                    <img class="ieee-carrossel-img" src="../../images/I5.webp" alt="logo da ESG">
-                    <img class="ieee-carrossel-img" src="../../images/I6.webp" alt="logo da ESG-Segurança">
-                    <img class="ieee-carrossel-img" src="../../images/I7.webp" alt="logo da CPGEI">
-                    <img class="ieee-carrossel-img" src="../../images/I8.webp" alt="logo do utfpr">
-                    <img class="ieee-carrossel-img" src="../../images/I9.webp" alt="logo da usrn">
-                    <img class="ieee-carrossel-img" src="../../images/I10.webp" alt="logo da PPGES">
-                    <img class="ieee-carrossel-img" src="../../images/I11.webp" alt="logo da profComp">
-                    <img class="ieee-carrossel-img" src="../../images/I12.webp" alt="logo da AutomacaoUFSC">
+                    <img class="ieee-carrossel-img" src="/images/I1.webp" alt="logo do VISIT RIO">
+                    <img class="ieee-carrossel-img" src="/images/I2.webp" alt="logo da prefeitura do Rio">
+                    <img class="ieee-carrossel-img" src="/images/I3.webp" alt="logo da UFSC">
+                    <img class="ieee-carrossel-img" src="/images/I4.webp" alt="logo do IFF">
+                    <img class="ieee-carrossel-img" src="/images/I5.webp" alt="logo da ESG">
+                    <img class="ieee-carrossel-img" src="/images/I6.webp" alt="logo da ESG-Segurança">
+                    <img class="ieee-carrossel-img" src="/images/I7.webp" alt="logo da CPGEI">
+                    <img class="ieee-carrossel-img" src="/images/I8.webp" alt="logo do utfpr">
+                    <img class="ieee-carrossel-img" src="/images/I9.webp" alt="logo da usrn">
+                    <img class="ieee-carrossel-img" src="/images/I10.webp" alt="logo da PPGES">
+                    <img class="ieee-carrossel-img" src="/images/I11.webp" alt="logo da profComp">
+                    <img class="ieee-carrossel-img" src="/images/I12.webp" alt="logo da AutomacaoUFSC">
                 </div>
             </div>
 
