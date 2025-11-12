@@ -237,12 +237,13 @@
     }
 
     .team-card {
-        width: 340px;
+        min-width: 220px;
+        width: 80%;
     }
 
     .team-card img {
-        width: 140px;
-        height: 140px;
+        width: 100px;
+        height: 100px;
     }
 
     .p-D {
@@ -255,6 +256,27 @@
 
     .team-track {
         grid-template-columns: 1fr;
+    }
+
+
+    .team-card-text {
+        overflow-wrap: anywhere;
+    }
+
+    .team-card-text h3 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .team-card-text h4 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .team-card-text p {
+        font-size: 16px;
+        font-weight: 400;
     }
 }
 </style>

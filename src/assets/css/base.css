@@ -125,41 +125,4 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "Archivo";
-  src: url("@/assets/fonts/Archivo-VariableFont_wdth,wght.ttf")
-    format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Archivo";
-  src: url("@/assets/fonts/Archivo-Italic-VariableFont_wdth,wght.ttf")
-    format("truetype");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Righteous";
-  src: url("@/assets/fonts/Righteous-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-:root {
-  color-scheme: light;
-  --primary-color-light: #fff9ed;
-  --primary-color: #f5a214;
-  --primary-color-dark: #523606;
-
-  --secondary-color-light: #f4f6fb;
-  --secondary-color: #426fa1;
-  --secondary-color-dark: #1c2733;
-
-  --neutral-color-light: #fffbf7;
-  --neutral-color-dark: #1f1c1a;
-}

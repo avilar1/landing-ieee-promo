@@ -5,6 +5,155 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
+
+    <style>
+
+
+
+/* ESTILOS GERAIS PRIMEIRA DOBRA*/
+
+@font-face {
+  font-family: "Archivo";
+  src: url("@/assets/fonts/Archivo-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("@/assets/fonts/Archivo-Italic-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: url("@/assets/fonts/Righteous-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  color-scheme: light;
+  --primary-color-light: #fff9ed;
+  --primary-color: #f5a214;
+  --primary-color-dark: #523606;
+
+  --secondary-color-light: #f4f6fb;
+  --secondary-color: #426fa1;
+  --secondary-color-dark: #1c2733;
+
+  --neutral-color-light: #fffbf7;
+  --neutral-color-dark: #1f1c1a;
+}
+      .in-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 16px;
+    height: calc(80px - 32px);
+    background-color: transparent;
+    transition: background-color 300ms ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.in-nav.scrolled {
+    background-color: var(--neutral-color-dark);
+}
+
+.in-nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+/* Oculta visualmente mas mantém layout */
+.visually-hidden {
+    visibility: hidden;
+    pointer-events: none;
+    /* impede cliques */
+}
+
+.in-nav-links a {
+    color: var(--neutral-color-light);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Burger */
+.burger-btn {
+    display: none;
+    background: transparent;
+    border: 0;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.burger-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Mobile menu (dropdown) */
+.mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--neutral-color-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.mobile-menu.open {
+    transform: scaleY(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu a {
+    color: var(--neutral-color-light);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 4px;
+}
+
+@media (max-width: 768px) {
+    .in-nav {
+        justify-content: space-between;
+        padding: 16px 20px;
+    }
+
+    .in-nav-links {
+        display: none;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+}
+
+
+
+
+
+    </style>
   </head>
   <body>
     <div id="app"></div>

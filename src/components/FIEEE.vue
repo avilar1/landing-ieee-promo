@@ -60,7 +60,7 @@
             </div>
 
             <p class="ieee-final-text">Ready to Shape the Future with Us?</p>
-            <button class="btn-ieee-final">Explore Partnership Opportunities</button>
+            <a class="btn-ieee-final" href="/sponsorship"> Explore Partnership Opportunities</a>
         </div>
     </div>
 </template>
@@ -179,6 +179,8 @@
     font-weight: 600;
     line-height: 1.2;
     box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.25);
+
+    text-decoration: none;
 }
 
 .btn-ieee-final:hover {
