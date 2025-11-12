@@ -39,7 +39,7 @@
         </div>
 
         <div class="ieee-final">
-            <p class="ieee-final-text">Meet the institutions who share our mission to drive technological innovation for
+            <!-- <p class="ieee-final-text">Meet the institutions who share our mission to drive technological innovation for
                 humanity</p>
 
             <div ref="carrossel" class="ieee-carrossel">
@@ -57,7 +57,7 @@
                     <img class="ieee-carrossel-img" src="/images/I11.webp" alt="logo da profComp">
                     <img class="ieee-carrossel-img" src="/images/I12.webp" alt="logo da AutomacaoUFSC">
                 </div>
-            </div>
+            </div> -->
 
             <p class="ieee-final-text">Ready to Shape the Future with Us?</p>
             <a class="btn-ieee-final" href="/sponsorship"> Explore Partnership Opportunities</a>
