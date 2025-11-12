@@ -9,23 +9,23 @@ function show(n: number) {
 </script>
 
 <template>
-    <div class="visit-rio" v-observe="{ once: false }" id="visit">
+    <div class="visit-rio" id="visit">
         <div class="visit-titl">
-            <h2 class="visit-h2">Welcome to Rio: Explore the Host City</h2>
-            <p class="visit-sub">Don't forget to explore the vibrant city hosting us!
+            <h2 class="visit-h2" v-observe="{ once: false }">Welcome to Rio: Explore the Host City</h2>
+            <p class="visit-sub" v-observe="{ once: false }">Don't forget to explore the vibrant city hosting us!
                 Rio de Janeiro é uma mistura de beleza natural e riqueza cultural que oferece uma experiência
                 inesquecível
                 fora das salas de conferência.</p>
         </div>
         <div class="visit-container-deck">
-            <nav class="visit-nav">
+            <nav class="visit-nav" v-observe="{ once: false }">
                 <button class="btn-visit" :class="{ active: active === 1 }" @click="show(1)">Beaches &
                     Coastline</button>
                 <button class="btn-visit" :class="{ active: active === 2 }" @click="show(2)">Natural Wonders</button>
                 <button class="btn-visit" :class="{ active: active === 3 }" @click="show(3)">Culture & History</button>
             </nav>
 
-            <nav class="visit-nav-menu-mobile">
+            <nav class="visit-nav-menu-mobile" v-observe="{ once: false }">
                 <select class="btn-visit" v-model="active">
                     <option :value="1">Beaches & Coastline</option>
                     <option :value="2">Natural Wonders</option>
@@ -37,28 +37,28 @@ function show(n: number) {
             <transition name="fade" mode="out-in">
                 <div :key="active" class="visit-imgs-cards" :class="`visit-imgs-cards-${active}`">
                     <template v-if="active === 1">
-                        <img src="../../public/images/R11.webp" alt="">
-                        <img src="../../public/images/R12.webp" alt="">
-                        <img src="../../public/images/R13.webp" alt="">
+                        <img src="/images/R11.webp" alt="">
+                        <img src="/images/R12.webp" alt="">
+                        <img src="/images/R13.webp" alt="">
                     </template>
 
                     <template v-else-if="active === 2">
-                        <img src="../../public/images/R21.webp" alt="">
-                        <img src="../../public/images/R22.webp" alt="">
-                        <img src="../../public/images/R23.webp" alt="">
+                        <img src="/images/R21.webp" alt="">
+                        <img src="/images/R22.webp" alt="">
+                        <img src="/images/R23.webp" alt="">
                     </template>
 
                     <template v-else>
-                        <img src="../../public/images/R31.webp" alt="">
-                        <img src="../../public/images/R32.webp" alt="">
-                        <img src="../../public/images/R33.webp" alt="">
+                        <img src="/images/R31.webp" alt="">
+                        <img src="/images/R32.webp" alt="">
+                        <img src="/images/R33.webp" alt="">
                     </template>
                 </div>
             </transition>
         </div>
 
         <div class="visit-container-btn-visit">
-            <button class="btn-vRio">Go To Visit Rio</button>
+            <button class="btn-vRio" v-observe="{ once: false }">Go To Visit Rio</button>
         </div>
     </div>
 </template>

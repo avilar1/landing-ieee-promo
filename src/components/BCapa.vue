@@ -71,8 +71,8 @@ watch(currentImages, (arr) => {
                 </div>
             </div>
             <div class="capa-baixo">
-                <img src="../../public/images/IEEE-MB.webp" alt="logo ieee mb">
-                <img src="../../public/images/IEEE-IES.webp" alt="logo ieee IES">
+                <img src="/images/IEEE-MB.webp" alt="logo ieee mb">
+                <img src="/images/IEEE-IES.webp" alt="logo ieee IES">
                 <ILogo :light="true" />
             </div>
         </div>
@@ -112,7 +112,7 @@ watch(currentImages, (arr) => {
     width: 100%;
     height: 100%;
     background:
-        url('../../public/images/ruido1.webp') repeat,
+        url('/images/ruido1.webp') repeat,
         linear-gradient(rgba(31, 28, 26, 0.15), rgba(255, 251, 247, 0.15)),
         linear-gradient(rgba(30, 25, 20, 0.3), rgba(30, 25, 20, 0.3));
     background-size: 200px 200px, cover, cover;

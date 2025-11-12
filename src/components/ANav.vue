@@ -46,7 +46,7 @@ onUnmounted(() => {
         <div class="in-nav-links" :class="{ 'visually-hidden': hideMenu }" :aria-hidden="hideMenu"
             :inert="hideMenu ? true : undefined">
             <a href="#about">About us</a>
-            <a href="#themes">Focus Theme</a>
+            <a href="#themes">Theme</a>
             <a href="#visit">Visit Rio</a>
             <a href="#ieee">Organization</a>
             <a href="#Supporters">Supporters</a>
